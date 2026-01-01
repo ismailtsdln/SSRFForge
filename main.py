@@ -1,7 +1,5 @@
-from rich.console import Console
-from rich.panel import Panel
-from rich.text import Text
-from art import tprint
+import asyncio
+import argparse
 import sys
 
 from core.engine import HTTPEngine
@@ -16,6 +14,11 @@ from modules.rce_redis import RedisExploit
 from modules.rce_fastcgi import FastCGIExploit
 from utils.logger import Logger, console
 from utils.reporter import ReportGenerator
+
+from rich.console import Console
+from rich.panel import Panel
+from rich.text import Text
+from art import tprint
 
 def display_banner():
     tprint("SSRFForge", font="slant")
