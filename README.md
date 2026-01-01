@@ -29,7 +29,7 @@ Ensure you have Python 3.10+ installed.
 
 ```bash
 # Clone the repository
-git clone https://github.com/ismailtasdelen/SSRFForge.git
+git clone https://github.com/ismailtsdln/SSRFForge.git
 cd SSRFForge
 
 # Install dependencies
@@ -90,4 +90,4 @@ This tool is strictly for **educational purposes** and **authorized security tes
 Contributions are welcome! Please feel free to submit a Pull Request or open an Issue.
 
 ---
-Developed by **@ismailtasdelen**
+Developed by **@ismailtsdln**

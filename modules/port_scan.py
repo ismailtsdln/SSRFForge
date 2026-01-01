@@ -6,17 +6,24 @@ class PortScan(BaseModule):
 
     async def run(self, target_url: str, **kwargs):
         network = kwargs.get("network", "127.0.0.1")
+        progress = kwargs.get("progress")
         results = []
         
         Logger.info(f"Scanning common ports on {network}...")
+        
+        task = None
+        if progress:
+            task = progress.add_task("[magenta]Scanning ports...", total=len(self.COMMON_PORTS))
+
         for port in self.COMMON_PORTS:
-            # We assume the target_url has 'SSRF' as a placeholder
             payload = f"http://{network}:{port}"
             res = await self.engine.get(target_url.replace("SSRF", payload))
             
-            # Very basic heuristic for port scanning via SSRF
             if res.get("status") and res["status"] != 404:
-                Logger.success(f"Port {port} appears to be OPEN or responding.")
+                Logger.success(f"Port {port} is OPEN or responding.")
                 results.append(port)
+            
+            if progress and task is not None:
+                progress.update(task, advance=1)
         
         return results
