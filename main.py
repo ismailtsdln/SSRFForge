@@ -21,7 +21,7 @@ def display_banner():
     tprint("SSRFForge", font="slant")
     banner_text = Text.assemble(
         ("Advanced SSRF Exploitation Framework\n", "bold cyan"),
-        ("Developed by ", "white"), ("@ismailtsdln", "bold magenta")
+        ("Developed by ", "white"), ("Ismail Tasdelen ", "bold magenta"), ("(@ismailtsdln)", "italic white")
     )
     console.print(Panel(banner_text, border_style="bright_blue", expand=False))
 

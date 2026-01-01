@@ -90,4 +90,4 @@ This tool is strictly for **educational purposes** and **authorized security tes
 Contributions are welcome! Please feel free to submit a Pull Request or open an Issue.
 
 ---
-Developed by **@ismailtsdln**
+Developed by **Ismail Tasdelen** ([@ismailtsdln](https://github.com/ismailtsdln))
